@@ -1,8 +1,8 @@
 {
-  "name": "virtual-lolly-backend",
+  "name": "virtuallolly-backend",
   "version": "0.1.0",
   "bin": {
-    "virtual-lolly-backend": "bin/virtual-lolly-backend.js"
+    "virtuallolly-backend": "bin/virtuallolly-backend.js"
   },
   "scripts": {
     "build": "tsc",

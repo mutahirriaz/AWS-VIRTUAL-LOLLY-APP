@@ -1,11 +1,11 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as VirtualLollyBackend from '../lib/virtual-lolly-backend-stack';
+import * as VirtuallollyBackend from '../lib/virtuallolly-backend-stack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new VirtualLollyBackend.VirtualLollyBackendStack(app, 'MyTestStack');
+    const stack = new VirtuallollyBackend.VirtuallollyBackendStack(app, 'MyTestStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}
