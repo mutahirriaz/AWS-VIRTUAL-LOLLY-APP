@@ -1,0 +1,30 @@
+
+type Lolly {
+    flavourTop    : String!
+    flavourMiddle : String!
+    flavourBottom : String!
+    message       : String!
+    recipientName : String!
+    senderName    : String!
+    lollyPath     : String
+}
+
+type Query {
+    getLolly : [Lolly!]
+}
+
+input LollyInput {
+    flavourTop    : String!
+    flavourMiddle : String!
+    flavourBottom : String!
+    message       : String!
+    recipientName : String!
+    senderName    : String!
+    lollyPath     : String
+}
+
+type Mutation {
+    addLolly(lolly:LollyInput!):Lolly!
+    
+}
+
