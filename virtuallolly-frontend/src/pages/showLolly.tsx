@@ -8,6 +8,7 @@ import { Container, Link } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Loader from '../components/loader'
 import {navigate} from 'gatsby';
 
 
@@ -89,7 +90,10 @@ function showLolly({location}) {
             <Header />
 
             <div>
-            {loading? (<div>Loading...</div>):(<div>
+
+                {/* <div className={style.loader} ><Loader /></div> */}
+
+            {loading? (<div className={style.loader} ><Loader /></div>):(<div>
                 <Container maxWidth='md' >
                     
                     <div className={style.showlolly_main_div} >

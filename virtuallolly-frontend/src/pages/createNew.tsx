@@ -102,7 +102,7 @@ function createNew() {
                     <label htmlFor="to_message" className={style.to_message} >
                         Say something nice
                     </label>
-                    <TextField multiline rows={7} name="to_message" id='textarea' className={style.to_message} label='Message' variant='outlined' onChange={(e)=> {
+                    <TextField multiline rows={7} name="to_message" id={style.textarea} className={style.to_message} label='Message' variant='outlined' onChange={(e)=> {
                         setMessage(e.target.value)
                        }}  />
 

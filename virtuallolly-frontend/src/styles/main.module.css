@@ -5,6 +5,7 @@ body{
     padding: 0px;
     margin: 0px;
     background-color: #21212b;
+    overflow-x: hidden !important;
     
 }
 .heading_div{
@@ -352,4 +353,15 @@ body{
     .path_msg_link pre{
         font-size: 12px !important;
     }
+}
+.loader{
+    display: flex;
+    /* height: 100vh; */
+    width: 98vw;
+    /* justify-content: center;
+    align-items: center; */
+    overflow-y: hidden !important;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 20px;
 }
