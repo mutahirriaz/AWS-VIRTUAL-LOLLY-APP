@@ -10,7 +10,7 @@ type Lolly {
 }
 
 type Query {
-    getLolly : [Lolly!]
+    getLolly(lollyPath: String!) : Lolly!
 }
 
 input LollyInput {

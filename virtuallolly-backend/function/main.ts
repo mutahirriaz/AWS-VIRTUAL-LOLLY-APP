@@ -8,6 +8,7 @@ interface AppSyncEvent {
     },
     arguments: {
         lolly: Lolly
+        lollyPath: string
     }
 }
 
@@ -17,7 +18,7 @@ exports.handler = async (event: AppSyncEvent) => {
         case "addLolly":
             return await addLolly(event.arguments.lolly);
         case "getLolly":
-            return await getLolly();
+            return await getLolly(event.arguments.lollyPath);
         default: 
             return null;
     }

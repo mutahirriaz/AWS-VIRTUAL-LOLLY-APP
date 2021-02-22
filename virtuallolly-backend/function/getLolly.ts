@@ -1,18 +1,20 @@
 import {DynamoDB} from 'aws-sdk'
 const documentClient = new DynamoDB.DocumentClient();
 
-interface Params {
-    TableName: string | ""
-}
 
-async function getLolly() {
 
-    const params:Params = {
-        TableName: process.env.Virtual_Table || ""
+async function getLolly(lollyPath: string) {
+
+    const params = {
+        TableName: process.env.Virtual_Table || "",
+        Key:{
+            lollyPath:lollyPath
+        }
     }
     try{
-        const data = await documentClient.scan(params).promise()
-        return data.Items
+        const data = await documentClient.get(params).promise();
+        return data.Item
+
     }
     catch(e){
         return null
