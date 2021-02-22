@@ -37,7 +37,6 @@ function createNew() {
                 },
             });
            
-            console.log(data)
 
             navigate(`/showLolly?id=${data.data.addLolly.lollyPath}`)
 

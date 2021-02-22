@@ -4,10 +4,8 @@ import {API} from 'aws-amplify'
 import {getLolly} from '../graphql/queries'
 import Header from '../components/header/header';
 import style from '../styles/main.module.css'
-import { Container, Link } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Loader from '../components/loader'
 import {navigate} from 'gatsby';
 
@@ -46,14 +44,9 @@ function showLolly({location}) {
     const id = location.search
 
     const lollyPath = id.slice(4)
-    console.log("iddd>>", lollyPath)
 
     const [todoData, setTodoData] = useState<incomingData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [idd, setId] = useState('')
-
-
-   
 
     const fetchLolly = async () => {
 
@@ -67,7 +60,6 @@ function showLolly({location}) {
             })
             
             setTodoData(data as incomingData)
-            console.log("dataaa", data)
             setLoading(false)
        }
        catch(e){
@@ -90,8 +82,6 @@ function showLolly({location}) {
             <Header />
 
             <div>
-
-                {/* <div className={style.loader} ><Loader /></div> */}
 
             {loading? (<div className={style.loader} ><Loader /></div>):(<div>
                 <Container maxWidth='md' >
